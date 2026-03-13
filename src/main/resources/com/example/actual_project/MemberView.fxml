@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.actual_project.controllers.MemberController">
+    <children>
+
+        <VBox alignment="TOP_CENTER" maxWidth="500" spacing="20" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <padding>
+                <Insets bottom="30" left="40" right="40" top="30" />
+            </padding>
+
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="New Member Registration" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <Label text="Enter the details below to add a new member to Aspire Gym." style="-fx-font-size: 13px; -fx-text-fill: #7f8c8d;"/>
+            </VBox>
+
+            <GridPane hgap="15" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50" />
+                    <ColumnConstraints percentWidth="50" />
+                </columnConstraints>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+                    <Label text="Member ID" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtMemberId" promptText="e.g. 104" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label text="First Name" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtFirstName" promptText="First Name" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label text="Last Name" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtLastName" promptText="Last Name" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label text="Gender" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <ComboBox fx:id="cmbGender" promptText="Select Gender" maxWidth="Infinity" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-color: #f9f9f9; -fx-padding: 4;"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Label text="Date of Birth" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <DatePicker fx:id="dpDateOfBirth" promptText="Select DOB" maxWidth="Infinity" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 4;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <Label text="Phone Number" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtPhone" promptText="10-digit number" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <Label text="Email Address" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtEmail" promptText="Email" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+                    <Label text="Home Address" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtAddress" promptText="Full Address" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="5">
+                    <Label text="Join Date" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <DatePicker fx:id="dpJoinDate" promptText="Select Join Date" maxWidth="Infinity" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 4;"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <Label text="Membership Plan" style="-fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+                    <ComboBox fx:id="cmbPlanId" promptText="Select Plan" maxWidth="Infinity" style="-fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-color: #f9f9f9; -fx-padding: 4;"/>
+                </VBox>
+            </GridPane>
+
+            <Button text="Save Member" onAction="#handleSaveMember" maxWidth="Infinity" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-padding: 12; -fx-background-radius: 5; -fx-cursor: hand;">
+                <VBox.margin>
+                    <Insets top="10" />
+                </VBox.margin>
+            </Button>
+
+        </VBox>
+    </children>
+</StackPane>
