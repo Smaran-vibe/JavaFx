@@ -8,7 +8,7 @@ public class fixed {
         Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/javafxdb",
                 "root",
-                "Trafalgar law@123");
+                "");
 
         Scanner sc = new Scanner(System.in);
 
